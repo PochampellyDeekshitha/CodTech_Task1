@@ -1,0 +1,255 @@
+/* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Soft purple gradient */
+    animation: gradientShift 10s ease infinite; /* Smooth background transition */
+    background-size: 400% 400%;  /* Make the gradient dynamic */
+    transition: background-color 0.3s, background 0.3s; /* Smooth transition */
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.85); /* Light transparent background for task container */
+    padding: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 500px; /* Width of the container */
+    max-width: 100%;
+    height: 600px; /* Height of the container */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #6c99c5;  /* Darker text for clarity */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Dark Mode Toggle Styling */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom Checkbox with Icon */
+.mode-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + .mode-icon::before {
+    content: '🌙';  /* Moon icon for dark mode */
+}
+
+input[type="checkbox"]:checked + .mode-icon::before {
+    content: '☀️';  /* Sun icon for light mode */
+}
+
+#modeText {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Clock Styling */
+.clock {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Task Input, Priority Dropdown, and Add Button Styling */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    align-items: center;
+}
+/* Background for the body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);   
+    transition: background-color 0.3s, background 0.3s; /* Smooth transition */
+}
+
+/* Container styling */
+.container {
+    background: rgba(255, 255, 255, 0.822); /* Semi-transparent light background for container */
+    padding: 25px;
+    box-shadow: 0 0 40px rgba(15, 15, 15, 0.1); /* Soft shadow for depth */
+    width: 500px;
+    max-width: 100%;
+    height: 500px; /* Reduced height of the container */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.input-container input[type="text"],
+.input-container select,
+.input-container button,
+.input-container input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+.input-container input[type="text"]:focus,
+.input-container select:focus,
+.input-container button:focus {
+    outline: none;
+    border-color: #3498db;  /* Blue border on focus */
+}
+
+#addTaskBtn {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskBtn:hover {
+    background-color: #2980b9;  /* Darker blue on hover */
+}
+
+/* Filter Tasks Styling */
+.filter-container {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.filter-container select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+/* Task List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+li {
+    padding: 12px;
+    background: #ecf0f1;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #dfe6e9;  /* Slightly darker on hover */
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.priority {
+    font-weight: bold;
+    padding: 5px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.high {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.medium {
+    background-color: #f39c12;
+    color: white;
+}
+
+.low {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background: linear-gradient(135deg, #34495e, #2c3e50); /* Dark gradient for dark mode */
+}
+
+body.dark #modeText {
+    color: #fff;
+}
+
+body.dark .container {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+body.dark input[type="text"] {
+    background-color: #34495e;
+    color: #fff;
+}
+
+body.dark button {
+    background-color: #3498db;
+}
+
+body.dark button:hover {
+    background-color: #2980b9;
+}
+
+
